@@ -1,0 +1,9 @@
+# 在任何空文件夹下
+gh auth login --hostname github.com --with-token <<< "YOUR_GITHUB_PAT"
+
+# 创建空仓（私有 / 临时都可）
+gh repo create BubbleAssetsAI --private --confirm
+
+cd BubbleAssetsAI
+git commit --allow-empty -m "init"
+git push -u origin main
